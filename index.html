@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Cartão</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body>
+    <div class="container-geral">
+        <section class="section-conteudo-esquerda">
+            <article class="container-cartao">
+                <div class="cartao-frente">
+                    <div class="circulos">
+                        <div class="circulo-maior"></div>
+                        <div class="circulo-menor"></div>
+                    </div>
+                    <div class="conteudo-cartao">
+                        <div class="conteudo-cartao-numero">0000 0000 0000 0000</div>
+                        <div class="conteudo-cartao-name-date">
+                            <div class="conteudo-cartao-name">XXXXXXXXXXXXXXXX</div>
+                            <div class="conteudo-cartao-date">00/00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartao-verso">
+                    <div class="conteudo-verso-faixa-preta"></div>
+                    <div class="conteudo-verso-cvc">
+                        <div class="faixa-preta-cvc">
+                            <div class="conteudo-cvc">000</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="section-conteudo-direita">
+            <main>
+                <form id="container-form" method="POST">
+                    <label for="section-label-name">
+                        cardholder name <br>
+                        <input type="text" name="section-label-name" id="name" autofocus minlength="3"  placeholder="NAME">
+                    </label>
+                    <label for="section-label-card-number">
+                        card number <br>
+                        <input type="number" name="section-label-card-numbe" id="card-number" min="1000000000000000" max="9999999999999999"required placeholder="EX: 0000000000000000">
+                    </label>
+                    <div class="conteudo-adicional">
+                        <div>
+                            <label>
+                                exp. date(mm/yy)
+                                <div class="nivelar-data">
+                                    <input type="number" name="data-mes" id="data-mes" min="1" max="12" placeholder="MM">
+                                    <input type="number" name="data-ano" id="data-ano" min='1920' max="2023" placeholder="YY">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="area-cvc">
+                            <label>
+                                cvc
+                                <input type="number" name="info-cvc" id="info-cvc" min="100" max="999" placeholder="EX: 123">
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Confirm" class="button" required>
+                </form>
+            </main>
+        </section>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
